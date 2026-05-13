@@ -3,6 +3,8 @@ dependencies:
 ├── openai@6.37.0
 └── typescript@6.0.3
 
+here https://groq.com/ you need to create api key and than paste it to .env file as GROQ_API_KEY={KEY}
+
 // set it:
 you need to have node downloaded
 1. pnpm init
