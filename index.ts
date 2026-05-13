@@ -1,11 +1,21 @@
 #!/usr/bin/env node
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename =fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const apiPath = path.join(__dirname, ".env");
+
 
 import process from "node:process";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 
-dotenv.config();
 
+process.loadEnvFile(apiPath);
+
+dotenv.config();
 let question: string[] = process.argv.slice(2);
 let finalQ: string = question[0];
 
